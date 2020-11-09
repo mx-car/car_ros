@@ -1,3 +1,0 @@
-[submodule "car_com"]
-	path = car_com
-	url = git@github.com:mx-car/car_com.git
