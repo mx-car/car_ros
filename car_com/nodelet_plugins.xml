@@ -1,0 +1,8 @@
+<library path="lib/libcar_com_nodelet">
+    <class name="car_com/CarComNodelet" type="car_com::CarComNodelet" base_class_type="nodelet::Nodelet">
+        <description>
+            This nodelet converts markers to mprt format.
+        </description>
+    </class>
+</library>
+

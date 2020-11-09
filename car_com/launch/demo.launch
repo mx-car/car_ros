@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<launch>
+    
+  <arg name="robot_name"         default="car01"        />
+  <arg name="port"               default="/dev/ttyACM0" />
+  <arg name="launch_gamepad"     default="true"         />
+  
+  <group ns="$(arg robot_name)">
+    <node pkg="car_com" type="car_com_node" name="car_com" output="screen">
+      <param name="baudrate"  value="115200" />
+      <param name="port"  value="$(arg port)" />
+    </node>
+    <group if="$(arg launch_gamepad)">
+        <include file="$(find tuw_gamepad)/launch/twist_car.launch"/>
+    </group>
+  </group>
+  
+</launch>
